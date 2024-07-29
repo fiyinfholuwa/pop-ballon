@@ -1,0 +1,134 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+}
+
+.navbar-dark .navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #ff5a5f;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .dropdown-item:hover {
+    color: #ff5a5f;
+}
+
+.navbar-dark .navbar-nav .dropdown-menu {
+    background-color: #333;
+    border: none;
+}
+
+.navbar-dark .navbar-nav .dropdown-item {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background: url('./images/tinder1.jpg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 15px;
+}
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    animation: fadeInDown 1s;
+}
+
+.hero-content .lead {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s;
+}
+
+.hero-content .btn-primary {
+    background-color: #ff5a5f;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.hero-content .btn-primary:hover {
+    background-color: #e04449;
+}
+
+.hero-content .btn-primary:active {
+    background-color: #c93434;
+}
+
+.btn-custom {
+    border-radius: 30px; 
+    padding: 5px 20px; 
+    background-color: #fff; 
+    border: 2px solid transparent; 
+    color: #333; 
+    font-weight: bold; 
+}
+.btn-custom:hover {
+    background-color: #e9ecef; 
+    border-color: #ccc; 
+}
+
+/* Navigation and Hero Ends */
+
+.testimonial-carousel {
+    background: #f8f9fa;
+    padding: 2rem 0;
+}
+.testimonial-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    position: relative;
+    min-height: 300px; /* Increase this value to make the cards taller */
+}
+.testimonial-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+.testimonial-card p {
+    font-size: 1rem;
+    color: #666;
+}
+.quote-icon {
+    font-size: 3rem;
+    color: #0d6efd;
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+}
+@media (min-width: 768px) {
+    .testimonial-card {
+        margin: 1rem;
+    }
+}
