@@ -5,10 +5,21 @@ body {
     max-width: 100%;
 }
 
+.navbar {
+    background-color: #333; 
+}
 .navbar-dark .navbar-brand {
     font-weight: bold;
     font-size: 1.5rem;
     color: #ff5a5f;
+}
+
+.nav-page .navbar-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #0c131a;
+    height: 100px;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -109,7 +120,7 @@ body {
     margin-bottom: 2rem;
     padding: 1.5rem;
     position: relative;
-    min-height: 300px; /* Increase this value to make the cards taller */
+    min-height: 300px; 
 }
 .testimonial-card h3 {
     font-size: 1.25rem;
@@ -131,4 +142,139 @@ body {
     .testimonial-card {
         margin: 1rem;
     }
+}
+
+/* Footer styles*/
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+    color: #333;
+}
+.footer .footer-section {
+    margin-bottom: 30px;
+}
+.footer .footer-section h5 {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.footer .footer-section ul {
+    padding-left: 0;
+}
+.footer .footer-section ul li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+.footer .footer-section ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+.footer .footer-section ul li a:hover {
+    color: #007bff;
+}
+.footer .social-icons a {
+    margin-right: 15px;
+    color: #333;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+.footer .social-icons a:hover {
+    color: #007bff;
+}
+.footer .app-download img {
+    max-width: 150px;
+    margin-right: 15px;
+    transition: transform 0.3s;
+}
+.footer .app-download img:hover {
+    transform: scale(1.1);
+}
+.footer .footer-description {
+    margin-top: 40px;
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+.footer .footer-bottom {
+    padding: 20px 0;
+    border-top: 1px solid #dee2e6;
+    text-align: center;
+}
+
+/* Modal Structures Styles */
+
+.modal-content {
+    border-radius: 10px;
+    overflow: hidden;
+}
+.modal-header {
+    border-bottom: none;
+    background: #f8f9fa;
+    position: relative;
+    padding: 1.5rem;
+}
+.modal-header .close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+}
+.modal-title {
+    font-weight: bold;
+    font-size: 1.75rem;
+    color: #333;
+}
+.modal-body {
+    text-align: center;
+    padding: 2rem;
+    background: #fff;
+}
+.modal-body p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    color: #666;
+}
+.modal-body button {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 5px;
+}
+.modal-body button.google-btn {
+    background: #4285f4;
+    color: #fff;
+    border: none;
+}
+.modal-body button.facebook-btn {
+    background: #3b5998;
+    color: #fff;
+    border: none;
+}
+.modal-body button.phone-btn {
+    background: #34a853;
+    color: #fff;
+    border: none;
+}
+.modal-body .text-center h6 {
+    margin-top: 1.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+}
+.modal-body .d-flex img {
+    width: 150px;
+    height: auto;
+    transition: transform 0.2s;
+}
+.modal-body .d-flex img:hover {
+    transform: scale(1.05);
+}
+.modal-footer {
+    border-top: none;
+    justify-content: center;
+    background: #f8f9fa;
+    padding: 1rem;
+}
+.modal-footer button {
+    border-radius: 5px;
 }
