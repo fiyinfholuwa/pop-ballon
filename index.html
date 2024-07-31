@@ -12,104 +12,116 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-sticky">
-        <div class="container">
-            <a class="navbar-brand" href="#">DatingSite</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Products
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Product 1</a>
-                            <a class="dropdown-item" href="#">Product 2</a>
-                            <a class="dropdown-item" href="#">Product 3</a>
-                        </div>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="#">Learn</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Safety</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Download</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Language</a></li>
-                    <li class="nav-item"><a class="btn btn-custom" href="#" data-toggle="modal" data-target="#loginModal">Log in</a></li>
-                </ul>
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#"><img src="./images/apple.webp" alt="Tinder Logo"> Tinder</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="btn btn-custom" href="#" data-toggle="modal" data-target="#loginModal">Log in</a></li>
+            </ul>
         </div>
     </nav>
-
     <!-- Hero Section -->
     <section class="hero-section">
-        <div class="overlay"></div>
-        <div class="container text-center hero-content">
-            <h1 class="display-4 animate__animated animate__fadeInDown">Swipe Right®</h1>
-            <p class="lead animate__animated animate__fadeInUp">Find your match and start your love story today.</p>
-            <button type="button" class="btn btn-primary btn btn-primary btn-lg animate__animated animate__pulse animate__infinite" data-toggle="modal" data-target="#createAccountModal">
-                Create Account
-            </button>
+        <div>
+            <h1>Swipe Right<sup>®</sup></h1>
+            <button class="create-account-btn" data-toggle="modal" data-target="#createAccountModal">Create account</button>
         </div>
     </section>
 
+    <script>
+        window.addEventListener('scroll', function() {
+            var navbar = document.querySelector('.navbar');
+            var heroSection = document.querySelector('.hero-section');
+            var heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+            if (window.scrollY > heroBottom) {
+                navbar.classList.remove('navbar-sticky');
+            } else {
+                navbar.classList.add('navbar-sticky');
+            }
+        });
+        $('.navbar-toggler').on('click', function() {
+            $('.navbar-collapse').toggleClass('show');
+        });
+    </script>
     <!-- Create Account Modal -->
-    <div class="modal fade" id="createAccountModal" tabindex="-1" role="dialog" aria-labelledby="createAccountModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal fade" id="createAccountModal" tabindex="-1" aria-labelledby="createAccountModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="createAccountModalLabel">Create Account</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>By tapping Log In or Continue, you agree to our <a href="#">Terms</a>. Learn how we process your data in our <a href="#">Privacy Policy</a>, and <a href="#">Cookie Policy</a>.</p>
-                    <button type="button" class="btn google-btn btn-block">Continue with Google</button>
-                    <button type="button" class="btn facebook-btn btn-block">Log in with Facebook</button>
-                    <button type="button" class="btn phone-btn btn-block">Log in with phone number</button>
-                    <a href="#" class="d-block text-center mt-3">Trouble Logging In?</a>
+                    <p class="text-muted">By creating an account, you agree to our <a href="#">Terms</a>. Learn how we process your data in our <a href="#">Privacy Policy</a> and <a href="#">Cookie Policy</a>.</p>
+                    <form>
+                        <div class="form-group mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+                    </form>
+                    <div class="text-center mt-3">
+                        <a href="#" class="d-block">Already have an account? Log In</a>
+                    </div>
                     <div class="text-center mt-3">
                         <h6>Get the app!</h6>
                         <div class="d-flex justify-content-center">
-                            <a href="#"><img src="./images/apple.webp" alt="Download on the App Store" class="mr-2"></a>
-                            <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play"></a>
+                            <a href="#" class="me-2"><img src="./images/apple.webp" alt="Download on the App Store" class="img-fluid" style="width: 120px;"></a>
+                            <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="img-fluid" style="width: 120px;"></a>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- Log In Modal -->
-    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+    <!-- Modal for Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="createAccountModalLabel">Get Started</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <h5 class="modal-title" id="loginModalLabel">Log In</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>By tapping Log In or Continue, you agree to our <a href="#">Terms</a>. Learn how we process your data in our <a href="#">Privacy Policy</a>, and <a href="#">Cookie Policy</a>.</p>
-                    <button type="button" class="btn google-btn btn-block">Continue with Google</button>
-                    <button type="button" class="btn facebook-btn btn-block">Log in with Facebook</button>
-                    <button type="button" class="btn phone-btn btn-block">Log in with phone number</button>
-                    <a href="#" class="d-block text-center mt-3">Trouble Logging In?</a>
-                    <div class="text-center mt-3">
+                    <p>By logging in, you agree to our <a href="#">Terms</a>. Learn how we process your data in our <a href="#">Privacy Policy</a>, and <a href="#">Cookie Policy</a>.</p>
+                    <form>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                        </div>
+                        <button type="submit" class="btn-submit">Log In</button>
+                    </form>
+                    <a href="#" class="d-block text-center mt-2">Trouble Logging In?</a>
+                    <div class="text-center mt-2">
                         <h6>Get the app!</h6>
                         <div class="d-flex justify-content-center">
-                            <a href="#"><img src="./images/apple.webp" alt="Download on the App Store" class="mr-2"></a>
-                            <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play"></a>
+                            <a href="#"><img src="./images/apple.webp" alt="Download on the App Store" class="mr-2" style="width: 120px;"></a>
+                            <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" style="width: 120px;"></a>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -117,7 +129,7 @@
     <!---Testimonial Section Starts--->
     <div class="testimonial-carousel">
         <div class="container">
-            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="9000">
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="row">
@@ -305,7 +317,7 @@
         document.addEventListener('DOMContentLoaded', function () {
             var myCarousel = document.querySelector('#testimonialCarousel');
             var carousel = new bootstrap.Carousel(myCarousel, {
-                interval: 9000,
+                interval: 4000,
                 ride: 'carousel'
             });
         });

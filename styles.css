@@ -1,146 +1,148 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    padding: 0;
-    margin: 0;
-    max-width: 100%;
-}
-
-.navbar {
-    background-color: #333; 
-}
-.navbar-dark .navbar-brand {
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: #ff5a5f;
-}
-
-.nav-page .navbar-sticky {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: #0c131a;
-    height: 100px;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.75);
-}
-
-.navbar-dark .navbar-nav .nav-link:hover,
-.navbar-dark .navbar-nav .dropdown-item:hover {
-    color: #ff5a5f;
-}
-
-.navbar-dark .navbar-nav .dropdown-menu {
-    background-color: #333;
-    border: none;
-}
-
-.navbar-dark .navbar-nav .dropdown-item {
-    color: rgba(255, 255, 255, 0.75);
-}
-
-.hero-section {
-    position: relative;
-    height: 100vh;
-    background: url('./images/tinder1.jpg');
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    background-image: url('./images/tinder1.jpg'); 
+    background-size: cover;
+    background-attachment: fixed;
     color: white;
-    padding: 0 15px;
+    margin: 0;
+    padding: 0;
 }
-
-.hero-section .overlay {
+.navbar {
+    background: url('your-navbar-background.jpg') no-repeat center center; 
+    background-size: cover;
+    padding: 1rem 2rem;
     position: absolute;
+    width: 100%;
+    transition: all 0.3s;
+    z-index: 1000;
+}
+.navbar-sticky {
+    position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
 }
-
-.hero-content {
+.navbar-brand img {
+    width: 40px;
+}
+.nav-link {
+    color: white !important;
+    font-weight: 500;
+}
+.nav-link:hover {
+    color: #ff004f !important;
+}
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    margin-bottom: 3rem;
+    background-color: rgba(0, 0, 0, 0.6); /* Optional for better readability */
     position: relative;
-    z-index: 1;
 }
-
-.hero-content h1 {
+.hero-section h1 {
     font-size: 4rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    animation: fadeInDown 1s;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.hero-content .lead {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    animation: fadeInUp 1s;
-}
-
-.hero-content .btn-primary {
-    background-color: #ff5a5f;
+.btn {
+    background-color: #ff004f;
     border: none;
-    transition: background-color 0.3s ease;
+    padding: 0.5rem 1.5rem; 
+    font-size: 1rem; 
+    color: white;
+    border-radius: 20px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
 }
-
-.hero-content .btn-primary:hover {
-    background-color: #e04449;
+.btn:hover {
+    background-color: white;
+    transform: scale(1.05);
 }
-
-.hero-content .btn-primary:active {
-    background-color: #c93434;
+.create-account-btn {
+    background-color: #ff004f;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.5rem;
+    color: white;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
 }
-
-.btn-custom {
-    border-radius: 30px; 
-    padding: 5px 20px; 
-    background-color: #fff; 
-    border: 2px solid transparent; 
-    color: #333; 
-    font-weight: bold; 
+.create-account-btn:hover {
+    background-color: #e60044;
+    transform: scale(1.05);
 }
-.btn-custom:hover {
-    background-color: #e9ecef; 
-    border-color: #ccc; 
+.content-section {
+    height: 100vh;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    color: black;
 }
-
 /* Navigation and Hero Ends */
 
 .testimonial-carousel {
     background: #f8f9fa;
-    padding: 2rem 0;
+    padding: 3rem 0;
 }
+
 .testimonial-card {
     background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    padding: 2rem;
     position: relative;
-    min-height: 300px; 
+    min-height: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
 .testimonial-card h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
     color: #333;
+    font-weight: 600;
 }
+
 .testimonial-card p {
-    font-size: 1rem;
-    color: #666;
+    font-size: 1.125rem;
+    color: #555;
+    line-height: 1.6;
 }
+
 .quote-icon {
-    font-size: 3rem;
-    color: #0d6efd;
+    font-size: 4rem;
+    color: #007bff;
     position: absolute;
-    top: -1rem;
-    left: -1rem;
+    top: -1.5rem;
+    left: -1.5rem;
 }
+
 @media (min-width: 768px) {
     .testimonial-card {
         margin: 1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .carousel-inner {
+        display: flex;
+        flex-direction: column;
+    }
+    .carousel-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .carousel-item-next,
+    .carousel-item-prev,
+    .carousel-item-next.carousel-item-left,
+    .carousel-item-prev.carousel-item-right {
+        display: none;
     }
 }
 
@@ -201,80 +203,206 @@ body {
     text-align: center;
 }
 
-/* Modal Structures Styles */
-
 .modal-content {
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
+    border: 1px solid #ddd;
 }
+/* Modal Content */
+.modal-content {
+    border-radius: 6px;
+    overflow: hidden;
+    max-width: 90vw;
+    margin: auto;
+}
+
+/* Modal Header */
 .modal-header {
     border-bottom: none;
     background: #f8f9fa;
     position: relative;
-    padding: 1.5rem;
+    padding: 0.75rem;
+    text-align: center;
 }
-.modal-header .close {
+
+.modal-header .btn-close {
     position: absolute;
-    right: 1rem;
-    top: 1rem;
-    font-size: 1.5rem;
+    right: 0.75rem;
+    top: 0.75rem;
+    font-size: 1.25rem;
 }
+
+/* Modal Title */
 .modal-title {
     font-weight: bold;
-    font-size: 1.75rem;
+    font-size: 1.25rem;
     color: #333;
 }
+
+/* Modal Body */
 .modal-body {
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
     background: #fff;
 }
+
 .modal-body p {
-    margin-bottom: 1.5rem;
-    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
     color: #666;
 }
-.modal-body button {
+
+.modal-body .form-group {
     margin-bottom: 1rem;
-    font-size: 1.2rem;
-    padding: 0.75rem 1.25rem;
-    border-radius: 5px;
 }
-.modal-body button.google-btn {
-    background: #4285f4;
-    color: #fff;
-    border: none;
-}
-.modal-body button.facebook-btn {
-    background: #3b5998;
-    color: #fff;
-    border: none;
-}
-.modal-body button.phone-btn {
-    background: #34a853;
-    color: #fff;
-    border: none;
-}
-.modal-body .text-center h6 {
-    margin-top: 1.5rem;
-    font-weight: bold;
-    font-size: 1rem;
+
+.modal-body .form-group label {
+    font-size: 0.875rem;
     color: #333;
 }
-.modal-body .d-flex img {
-    width: 150px;
-    height: auto;
-    transition: transform 0.2s;
+
+.modal-body .form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 0.875rem;
 }
-.modal-body .d-flex img:hover {
-    transform: scale(1.05);
+
+.modal-body .btn-primary {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    width: 100%;
 }
+
+.modal-body .text-center h6 {
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 0.875rem;
+    color: #333;
+}
+
+.modal-body .text-center a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.modal-body .text-center a:hover {
+    text-decoration: underline;
+}
+
+/* Modal Footer */
 .modal-footer {
     border-top: none;
     justify-content: center;
     background: #f8f9fa;
-    padding: 1rem;
+    padding: 0.75rem;
 }
+
 .modal-footer button {
-    border-radius: 5px;
+    border-radius: 4px;
+}
+/* Modal Login */
+
+/* Modal Content */
+.modal-content {
+    border-radius: 6px;
+    overflow: hidden;
+    max-width: 90vw;
+    margin: auto;
+}
+
+/* Modal Header */
+.modal-header {
+    border-bottom: none;
+    background: #f8f9fa;
+    position: relative;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+.modal-header .close {
+    position: absolute;
+    right: 0.75rem;
+    top: 0.75rem;
+    font-size: 1.25rem;
+}
+
+/* Modal Title */
+.modal-title {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+/* Modal Body */
+.modal-body {
+    text-align: center;
+    padding: 1rem;
+    background: #fff;
+}
+
+.modal-body p {
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.modal-body .form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.modal-body .form-group label {
+    font-size: 0.875rem;
+    color: #333;
+}
+
+.modal-body .form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 0.875rem;
+}
+
+.modal-body .btn-submit {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    width: 100%;
+    background: #007bff;
+    color: #fff;
+    border: none;
+}
+
+.modal-body .text-center h6 {
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 0.875rem;
+    color: #333;
+}
+
+.modal-body .text-center a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.modal-body .text-center a:hover {
+    text-decoration: underline;
+}
+
+/* Modal Footer */
+.modal-footer {
+    border-top: none;
+    justify-content: center;
+    background: #f8f9fa;
+    padding: 0.75rem;
+}
+
+.modal-footer button {
+    border-radius: 4px;
 }
