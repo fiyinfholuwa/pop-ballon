@@ -35,10 +35,11 @@ body {
     align-items: center;
     height: 100vh;
     text-align: center;
-    margin-bottom: 3rem;
-    background-color: rgba(0, 0, 0, 0.6); /* Optional for better readability */
+    margin-bottom: 0rem;
+    background-color: rgba(0, 0, 0, 0.6); 
     position: relative;
 }
+
 .hero-section h1 {
     font-size: 4rem;
     margin-bottom: 1.5rem;
@@ -406,3 +407,29 @@ body {
 .modal-footer button {
     border-radius: 4px;
 }
+/* Preloader syles */
+#preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+    color: #ff5864; 
+}
+
+#preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
