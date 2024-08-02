@@ -27,9 +27,10 @@
     <section class="hero-section">
         <div>
             <h1>Swipe Right<sup>®</sup></h1>
-            <button class="create-account-btn" data-toggle="modal" data-target="#createAccountModal">Create account</button>
+            <button class="create-account-btn" data-toggle="modal" data-target="#signupModal">Create account</button>
         </div>
     </section>
+    
 
     <script>
         window.addEventListener('scroll', function() {
@@ -47,43 +48,43 @@
         });
     </script>
     <!-- Create Account Modal -->
-    <div class="modal fade" id="createAccountModal" tabindex="-1" aria-labelledby="createAccountModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="createAccountModalLabel">Create Account</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
                 <div class="modal-body">
-                    <p class="text-muted">By creating an account, you agree to our <a href="#">Terms</a>. Learn how we process your data in our <a href="#">Privacy Policy</a> and <a href="#">Cookie Policy</a>.</p>
+                    <p>By signing up, you agree to our <a href="#">Terms</a>. Learn how we process your data in our <a href="#">Privacy Policy</a>, and <a href="#">Cookie Policy</a>.</p>
                     <form>
-                        <div class="form-group mb-3">
-                            <label for="username" class="form-label">Username</label>
-                            <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
+                        <div class="form-group">
+                            <label for="signup-email">Email address</label>
+                            <input type="email" class="form-control" id="signup-email" placeholder="Enter your email">
                         </div>
-                        <div class="form-group mb-3">
-                            <label for="email" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        <div class="form-group">
+                            <label for="signup-password">Password</label>
+                            <input type="password" class="form-control" id="signup-password" placeholder="Enter your password">
                         </div>
-                        <div class="form-group mb-3">
-                            <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                        <div class="form-group">
+                            <label for="signup-confirm-password">Confirm Password</label>
+                            <input type="password" class="form-control" id="signup-confirm-password" placeholder="Confirm your password">
                         </div>
-                        <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
                     </form>
-                    <div class="text-center mt-3">
-                        <a href="#" class="d-block">Already have an account? Log In</a>
-                    </div>
-                    <div class="text-center mt-3">
+                    <a href="#" class="d-block text-center mt-2">Already have an account? Log In</a>
+                    <div class="text-center mt-2">
                         <h6>Get the app!</h6>
                         <div class="d-flex justify-content-center">
-                            <a href="#" class="me-2"><img src="./images/apple.webp" alt="Download on the App Store" class="img-fluid" style="width: 120px;"></a>
-                            <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="img-fluid" style="width: 120px;"></a>
+                            <a href="#"><img src="./images/apple.webp" alt="Download on the App Store" class="mr-2" style="width: 120px;"></a>
+                            <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" style="width: 120px;"></a>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -94,7 +95,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="loginModalLabel">Log In</h5>
-                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -121,7 +122,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
