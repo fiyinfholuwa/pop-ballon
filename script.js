@@ -1,4 +1,4 @@
-        // NAVIGATIONS FUNCTIONALITY
+   /*     // NAVIGATIONS FUNCTIONALITY
         window.addEventListener('scroll', function() {
             var navbar = document.querySelector('.navbar');
             var heroSection = document.querySelector('.hero-section');
@@ -12,7 +12,7 @@
         $('.navbar-toggler').on('click', function() {
             $('.navbar-collapse').toggleClass('show');
 });
-
+*/
                 //TESTIMONIALS FUNCTIONALITY
 
                 document.addEventListener('DOMContentLoaded', function () {
