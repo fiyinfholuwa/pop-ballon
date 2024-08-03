@@ -144,6 +144,9 @@ body {
     background-blend-mode: darken; 
 }
 
+.mb{
+    margin-top: 14rem;
+}
 .hero-section h1 {
     font-size: 4rem;
     margin-bottom: 1.5rem;
@@ -533,8 +536,8 @@ body {
 }
 
 .spinner-border img {
-    width: 10rem; 
-    height: 10rem; 
+    width: 700%;
+    height: auto;
     animation: pulse 1.5s infinite ease-in-out;
 }
 
