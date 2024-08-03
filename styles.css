@@ -1,13 +1,31 @@
 body {
-    background-image: url('./images/tinder1.jpg'); 
-    background-size: cover;
-    background-attachment: fixed;
+    background-image: url('./images/backgroundpop.png'); 
+    background-size: contain; 
+    background-position: center; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat; 
     color: white;
     margin: 0;
     padding: 0;
+    height: 100vh; 
+}
+
+/* Optional: Additional styling for better readability and aesthetics */
+body {
+    font-family: Arial, sans-serif; 
+    line-height: 1.6;
+}
+
+
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        max-width: 90%; 
+    }
 }
 .navbar {
-    background: url('your-navbar-background.jpg') no-repeat center center; 
     background-size: cover;
     padding: 1rem 2rem;
     position: absolute;
@@ -22,7 +40,28 @@ body {
 }
 
 .navbar-brand {
-    display: inline-block; /* Ensures brand and toggle are inline */
+    display: inline-block; 
+}
+
+
+.navbar-logo {
+    max-height: 50px;
+    width: auto; 
+    transition: transform 0.2s ease-in-out; 
+}
+
+.navbar-logo:hover {
+    transform: scale(1.1); 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+    }
+    .navbar-logo {
+        max-height: 40px; 
+    }
 }
 
 .navbar-brand img {
@@ -35,7 +74,7 @@ body {
 }
 
 .navbar-toggler {
-    border: none; /* Removes border if any */
+    border: none; 
 }
 
 .nav-link {
@@ -97,9 +136,12 @@ body {
     align-items: center;
     height: 100vh;
     text-align: center;
-    margin-bottom: 0rem;
-    background-color: rgba(0, 0, 0, 0.6); 
+    margin-bottom: 0;
     position: relative;
+    background: rgba(85, 82, 82, 0.3); 
+    background-size: cover; 
+    background-position: center;
+    background-blend-mode: darken; 
 }
 
 .hero-section h1 {
